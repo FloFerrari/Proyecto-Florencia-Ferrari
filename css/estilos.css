@@ -1,0 +1,388 @@
+/* * reseteo, elimina los margenes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+    justify-self: center;
+}
+
+body{
+
+  position: relative;
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* * Inicio estilos header */
+
+h1 {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+
+.MenuDeNavegacion {
+  display: flex;
+  text-decoration: none;
+  color: whitesmoke;
+  position: relative;
+  gap: 30px;
+  padding-right: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+}
+
+
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: grey;
+  color: whitesmoke;
+}
+
+.Banner {
+  padding: 1%;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  justify-content:center;
+}
+
+/* * Inicio estilos header */
+
+/* * Inicio estilos main */
+
+.TituloPrincipal {
+  font-family: "Roboto", sans-serif;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: justify;
+  font-weight: 900;
+}
+
+.centrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centrartexto {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.parrafos {
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.listado{
+
+  margin: 10%;
+
+}
+/* * Inicio estilos main */
+
+/* * Inicio estilos footer */
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.submenu {
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: x-small;
+  color: whitesmoke;
+}
+.redessociales {
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  padding-bottom: 20px;
+  color: whitesmoke;
+}
+.derechos {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-size: x-small;
+  font-weight: 200;
+  color: whitesmoke;
+}
+
+.footerFijo {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  z-index: 100;
+}
+
+/* * Fin estilos footer */
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* * Inicio estilos sobre mí*/
+
+.imagenPerfil {
+  padding: 20px 100px;
+  width: 50%;
+  height: 50%;
+  object-fit: fill;
+  transition: all 0,8s ease;
+}
+
+.imagenPerfil:hover{
+  filter: grayscale(1);
+  transition: all 0,8s ease;
+  transform: scale(1.1);
+}
+
+.derecha {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+}
+
+.invertir {
+  flex-direction: row-reverse;
+}
+
+/* * Fin estilos sobre mí*/
+
+/* * Inicio estilos contacto*/
+
+.contacto {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+
+.containerFormulario{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  display:flex;   
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+.containerFormulario::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter:blur(50px);
+  z-index: -1;
+ 
+}
+.contact-box{
+  max-width: 850px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+
+}
+.left{
+  
+  background-size: cover;
+  height: 100%;
+}
+.right{
+  padding: 25px 40px;
+
+}
+h2{
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+}
+
+.field{
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.184);
+  outline:none;
+  background-color:white;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: all 0.3s ease-in-out;
+}
+.field:hover{
+  background-color: rgba(7, 7, 7, 0.1);
+
+}
+textarea{
+  min-height: 150px;
+}
+.btn{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: grey;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+  background-color: #cbcbcb;
+}
+.field:focus{
+  border: 2px solid grey;
+  background-color: #fff;
+}
+
+.galeriaContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-width: 1440px;
+  justify-content: center;
+  
+}
+
+/* * Fin estilos contacto*/
+/* * Inicio estilos galeria*/
+.galeria {
+  padding: 40px 0px;
+  max-width: 1440px;
+}
+
+.imagenGaleria {
+  height: 600px;
+  width: 300px;
+  object-fit: cover;
+  justify-self: center;
+}
+
+
+.ocultar {
+
+    display: none;
+}
+
+.espaciado {
+  gap: 10px;
+}
+
+.subtituloGaleria {
+  padding: 20px 0px 20px 60px;
+}
+/* * Fin estilos galeria*/
+/* * Media queries*/
+/* * Break points:
+>768 mobile
+>1024 tablet
+<1024 desktop */
+
+.subtitulo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.subBtitulo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+}
+/*tablet*/
+
+@media only screen and (min-width: 768px) {
+  .subtitulo {
+    font-weight: 800;
+    font-size: 16px;
+  }
+
+  .subBtitulo {
+    font-size: 16px;
+  }
+
+  .galeriaContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*desktop*/
+@media only screen and (min-width: 1024px) {
+  .subtitulo {
+    font-size: 32px;
+    font-size: 20px;
+  }
+  .galeriaContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .ocultar{
+      display: block;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+         
+  .container{
+   
+    padding: 20px;  
+  }
+ 
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+    .left{
+        background-size: cover;
+        height: 100%;
+    }
+    .right{
+        padding: 25px 20px;
+    }
+}
